@@ -1,0 +1,13 @@
+
+  .card  img {
+    max-width: 400px;
+    margin-top: 10%;
+    box-shadow: 1px 1px 3px  1px rgba(0, 0, 0, 4);
+  }
+  .card-body {
+      font-size: larger;
+  }
+  .card-title{
+     font-size: 15px;
+  }
+ 

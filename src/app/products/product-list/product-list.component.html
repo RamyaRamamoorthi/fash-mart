@@ -1,0 +1,112 @@
+
+
+
+    
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+
+  <a mat-raised-button   class ="button" color="accent" routerLink ="/product" routerLinkActive="active"
+  style="margin-left: 10px; margin-top: 10px;">Add-prodcut</a>
+  <a mat-raised-button  color="warn" routerLink ="/login" routerLinkActive="active" 
+  style="float: right;margin-right: 10px; margin-top: 10px;">Log-out</a>
+
+
+
+
+
+
+
+  <div class="container" >
+ 
+    <div class="row"  > 
+      <div class="col-md-3 col-sm-6" *ngFor="let prd of products ">
+  
+  <div class="card" style="width: 18rem;" class="list-card"   style="text-align: center;" >
+    <div class ="card-block">
+      <p class="card-text">
+        <b> {{ prd.productName }}</b> &nbsp;&nbsp;&nbsp;
+        {{ prd.productPrice  | currency }}
+      </p>
+     
+    <div class="card-body">
+     <img class="list-card-img" [src]="prd.image" [alt]="prd.productName">
+     <br />
+     <p>
+        {{prd.productDesc}}
+      </p>
+     
+    <b>Brand :  </b>{{prd.productBrand}} &nbsp;&nbsp;&nbsp;<b>BarCode :  </b> {{prd.productBarcode}}
+    <br/>
+    <br/>
+     <a mat-raised-button [routerLink]="['/edit',prd.id]" color="primary">Edit</a> &nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="warn" (click)="delete(prd.id)">Delete</button>
+     
+      
+    </div>
+  </div>
+  </div>
+  
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+<!--
+<mat-card class="list-card" *ngFor="let prd of products" style="text-align: center;" > 
+  <mat-list>
+   
+  <mat-card-header>
+    <mat-card-title>{{ prd.productName }}</mat-card-title>
+    <mat-card-subtitle><b>Brand :  </b>{{prd.productBrand}} &nbsp;&nbsp;&nbsp;<b>BarCode :  </b> {{prd.productBarcode}} </mat-card-subtitle> 
+   
+   </mat-card-header>
+   
+  <img mat-card-image [src]="prd.image" [alt]="prd.productName">
+  <mat-card-content>
+    <p>
+      <b> {{ prd.productName }}</b> &nbsp;&nbsp;&nbsp;
+      {{ prd.productPrice  | currency }}
+    </p>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <p>
+      {{prd.productDesc}}
+    </p>
+  </mat-card-content>
+  <mat-divider></mat-divider>
+ 
+    <mat-card-actions>
+      <a mat-raised-button [routerLink]="['/edit',prd.id]" color="primary">Edit</a>
+      <button mat-raised-button color="warn" (click)="delete(prd.id)">Delete</button>
+     
+      </mat-card-actions>
+</mat-list>
+</mat-card>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

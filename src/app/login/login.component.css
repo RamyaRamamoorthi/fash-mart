@@ -1,0 +1,13 @@
+.login-card {
+    max-width: 400px;
+    margin: 10% auto;
+  }
+  .login-full-width {
+    width: 100%;
+  }
+  a {
+    margin: 10px;
+}
+.register {
+    float: right;
+}

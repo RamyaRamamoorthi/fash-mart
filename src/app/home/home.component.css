@@ -1,0 +1,60 @@
+.list-card {
+    max-width: 300px;
+  }
+  
+  .list-card-img {
+    max-width: 150px;
+   
+  }
+  
+  * {
+    box-sizing: border-box;
+    
+  }
+.card-block{
+  margin-top: 20px;
+}
+.card img {
+  max-width: 100%;
+}
+.card{
+  margin-top: 30px;
+  
+  max-width: 300px;
+}
+.card-deck{
+  margin-left: 20%;
+}
+.jumb{
+  margin-top: 5%;
+  background-size: cover;
+  color: whitesmoke;
+  background-image: url("https://images.pexels.com/photos/276514/pexels-photo-276514.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+
+.img{
+  margin-top: 0px;
+  margin-left: 0px;
+  max-width: 560px;
+  height: 620px;
+}
+.label{
+  margin-left: 20%;
+  text-align: left; 
+ 
+}
+.head{
+  margin-top: 30px;
+  font-variant-caps: petite-caps;
+  color:orangered; 
+  font-style: oblique; 
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+.sub-head{
+  font-style:italic; 
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

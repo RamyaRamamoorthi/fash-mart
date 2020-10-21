@@ -1,0 +1,89 @@
+
+  <a mat-raised-button  color="warn" routerLink ="/login" routerLinkActive="active" 
+  style="float: right;margin-right: 10px; margin-top: 10px;">Log-out</a>
+
+
+<mat-card class="product-card"  >
+    <mat-card-header>
+        <mat-card-title>Add Products</mat-card-title>
+     </mat-card-header>
+    
+     <mat-card-content>
+      <form [formGroup]="productGroup">
+           
+        <mat-form-field class="product-full-width">
+            <mat-label>
+                Product Name
+            </mat-label>
+            <input matInput 
+            placeholder="Enter Name" 
+            formControlName="productName"
+          
+            name= "pname">
+          </mat-form-field>
+
+        <mat-form-field class="product-full-width">
+            <mat-label>
+                Product Amount
+            </mat-label>
+            <input matInput 
+            placeholder="Enter Amount"
+            formControlName="productPrice"
+            type="number" 
+            
+            name="pprice">
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+          </mat-form-field>
+
+          <mat-form-field class="product-full-width">
+            <mat-label>
+                Product Brand
+            </mat-label>
+            <input matInput 
+            placeholder="Enter Brand" 
+            formControlName="productBrand"
+           
+            name= "pbrand">
+          </mat-form-field>
+
+          <mat-form-field class="product-full-width">
+            <mat-label>
+                Product Barcode
+            </mat-label>
+            <input matInput 
+            placeholder="Enter Barcode" 
+            formControlName="productBarcode"
+            type="number"
+             name= "pbarcode">
+          </mat-form-field>
+
+          <mat-form-field class="product-full-width">
+            <mat-label>
+                Product Description
+            </mat-label>
+            <textarea matInput rows="3" 
+            placeholder="About Product" 
+            formControlName="productDesc"
+            
+            name= "pdesc"></textarea>
+          </mat-form-field>
+
+
+         </form>
+ <button mat-strorked-button (click)="filepick.click()"><b>Product Upload</b></button>
+         <input type="file" #filepick (change)="imagepick($event)">
+         <div class="image-preview" *ngIf="imagePreview !=='' && imagePreview">
+           <img [src]="imagePreview" alt="productGroup.productName.value">
+         </div>
+</mat-card-content>
+            <mat-card-actions>
+  <a mat-raised-button color="primary" (click)="addProduct()" routerLink = "/product-list">Save Product</a>
+ 
+   
+  <a mat-raised-button color="primary"  routerLink = "/product-list">List-products</a>
+  
+       </mat-card-actions>
+                
+             
+</mat-card>

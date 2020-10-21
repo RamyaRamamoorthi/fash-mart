@@ -1,0 +1,25 @@
+.list-card {
+    max-width: 300px;
+  }
+  .list-card img {
+    max-width: 150px;
+   
+  }
+  * {
+    box-sizing: border-box;
+    
+  }
+.card-block{
+  margin-top: 20px;
+}
+.card img {
+  max-width: 100%;
+}
+.card{
+  margin-top: 30px;
+  
+  max-width: 300px;
+}
+.card-deck{
+  margin-left: 20%;
+}
